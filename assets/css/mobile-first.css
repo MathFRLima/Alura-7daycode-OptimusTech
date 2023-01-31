@@ -1,0 +1,237 @@
+:root {
+    /* CORES DO PROJETO */
+    --background-primary: #ffffff;
+    --background-secundary: #c31919;
+    --color-text: #667085;
+    --color-title: #101828;
+    --color--text-btn: #ffffff;
+    --color-text-secundary-btn: #8e2424;
+    --color-border-design: #eaecf0;
+    --color-boder-email: #d0d5dd;
+    --color-box-shadow-email-btn: rgba(16, 24, 40, 0.5);
+
+    --font-family: 'Inter', sans-serif;;
+
+    font-size: 62.5%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+html {
+    font-family: var(--font-family);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* flex-direction: column; */
+    background-color: var(--background-primary);
+}
+
+/*-----NAVIGATION-----*/
+
+.container {
+    display: flex;
+    min-width: 35rem;
+}
+
+header nav.menu {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 0 1rem 0;
+    position: fixed;
+    justify-content: space-evenly;
+    background-color: var(--background-primary);
+}
+
+header nav.menu .menu__img {
+    width: 15rem;
+    order: 1;
+}
+
+header nav.menu .menu__lista {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding-left: 1rem;
+    order: 3;
+}
+
+header nav.menu .menu__lista .menu__lista__item,
+header nav.menu .menu__btns .menu__btns__entrar {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 125%;
+}
+
+header nav.menu .menu__btns .menu__btns__entrar {
+    padding-left: 3.6rem;
+    cursor: pointer;
+}
+
+header nav.menu .menu__btns .menu__btns__entrar:hover,
+header nav.menu .menu__lista .menu__lista__item:hover {
+    text-decoration: underline;
+    transition: .3s ease-in-out;
+}
+
+header nav.menu .menu__btns {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    order: 2;
+}
+
+header nav.menu .menu__btns .menu__btns__cadastrar {
+    text-decoration: none;
+    color: var(--color--text-btn);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 125%;
+    background-color: var(--color-text-secundary-btn);
+    border: 1px solid var(--color-text-secundary-btn);
+    border-radius: .8rem;
+    box-shadow: 0px 1px 2px var(--color-box-shadow-email-btn);
+    text-align: center;
+    padding: 1rem 1.8rem;
+    cursor: pointer;
+}
+
+header nav.menu .menu__btns .menu__btns__cadastrar:hover {
+    opacity: .9;
+    box-shadow: 2px 5px 5px var(--color-box-shadow-email-btn);
+    transition: .5s ease-in-out;
+}
+
+/*-----CONTENT----*/
+/*-----SOBRE NÓS-----*/
+
+section.about {
+    flex-direction: column;
+    align-items: center;
+}
+
+section.about .about__conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 .5rem;
+}
+
+section.about .about__conteudo .about__conteudo__titulo {
+    color: var(--color-text-secundary-btn);
+    padding-top: 9.6rem;
+    margin-bottom: 2.4rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+section.about .about__conteudo .about__conteudo__sub {
+    color: var(--color-title);
+    margin-bottom: 3.6rem;
+    font-size: 4.8rem;
+    font-weight: 600;
+    line-height: 125%;
+    text-align: center;
+}
+
+section.about .about__conteudo .about__conteudo__texto {
+    color: var(--color-text);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 125%;
+    text-align: center;
+    margin: 0 1rem 10.7rem 1rem;
+}
+
+section.about .about__lista {
+    border: 1px solid var(--background-secundary);
+    padding-top: 3rem;
+    margin: 0 1.5rem;
+}
+
+section.about .about__lista li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3.5rem;
+}
+
+section.about .about__lista .about__lista__titulo {
+    color: var(--color-text-secundary-btn);
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+section.about .about__lista .about__lista__sub {
+    color: var(--color-title);
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 125%;
+}
+
+section.about .about__lista .about__lista__text {
+    color: var(--color-text);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 125%;
+    text-align: center;
+    padding: 0 .5rem;
+}
+
+@media (min-width: 720px) {
+    .container {
+        display: flex;
+        width: 68rem;
+    }
+    
+    header nav.menu {
+        display: flex;
+        height: 8rem;
+        justify-content: space-between;
+    }
+
+    header nav.menu .menu__img {
+        order: 1;
+    }
+    
+    header nav.menu .menu__lista {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding-left: 1rem;
+        order: 2;
+    }
+
+    header nav.menu .menu__btns {
+        order: 3;
+    }
+
+    header nav.menu .menu__btns .menu__btns__entrar {
+        padding-left: 1rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        width: 120rem;
+    }
+
+    section.about .about__lista {
+        display: flex;
+        border: none;
+        padding-top: 3rem;
+        margin: 0;
+    }
+    
+    section.about .about__lista li{
+        display: flex;
+        align-items: center;
+        margin-bottom: 3.5rem;
+    }
+}
